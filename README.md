@@ -4,6 +4,8 @@ VariableContainer, a Python library, simplifies the creation and management of s
 ## Use:
 **A_pythonfile.py**
 ```
+from VariableContainer import VariableContainer
+
 container = VariableContainer("container-name")
 
 container.update_data({'a': 1})
@@ -15,6 +17,8 @@ The data is saved automatically !
 
 **B_pythonFile.py**
 ```
+from VariableContainer import VariableContainer
+
 container = VariableContainer("container-name")
 print(container.data)
 ```
