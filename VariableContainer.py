@@ -11,7 +11,6 @@ class VariableContainer:
     def create_container(self, name):
         if not os.path.exists(f"{name}.json"):
             json.dump({}, open(f"{name}.json", "w"))
-            print(f"Arquivo {name}.json criado com sucesso.")
         else:
             # Se o arquivo já existe, carregue os dados para o dicionário _data
             with open(f"{name}.json", "r") as file:
@@ -19,7 +18,6 @@ class VariableContainer:
 
     @property
     def data(self):
-        print(self._data)
         return self._data
 
     def _update_data(self, new_data):
@@ -29,10 +27,8 @@ class VariableContainer:
     def save_data(self):
         with open(f"{self.name}.json", "w") as file:
             json.dump(self._data, file)
-            print(f"Dados salvos com sucesso no arquivo {self.name}.json")
 
     def update_data(self, new_data):
         current_data = self._data.copy()
         current_data.update(new_data)
         self._update_data(current_data)
-
