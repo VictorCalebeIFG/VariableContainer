@@ -36,14 +36,3 @@ class VariableContainer:
         current_data.update(new_data)
         self._update_data(current_data)
 
-# Exemplo de uso
-container = VariableContainer("variables")
-
-# Acessando a propriedade data (getter)
-print(container.data)
-
-# Modificando o dicionário diretamente e acionando a função de salvamento
-container.update_data({'a': 1})
-container.update_data({'b': 1})
-
-# Não é necessário chamar container.save_data() explicitamente
